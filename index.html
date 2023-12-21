@@ -10,14 +10,11 @@
     body {
       margin: 0;
       padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
       background-color: rgb(220, 239, 245);
       background-image: url('background.png');
       background-repeat: repeat;
       background-size: cover;
+      font-family: 'Courier New', Courier, monospace;
     }
 
     .topnav {
@@ -37,7 +34,6 @@
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
-      font-family: 'Courier New', Courier, monospace;
       font-size: 18px;
       transition: background-color 0.3s;
     }
@@ -49,6 +45,14 @@
     .topnav a.active {
       background-color: #ffffff;
       color: rgb(2, 29, 41);
+    }
+
+    #center_body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin-top: 70px; /* Adjust as needed */
     }
 
     .center-content {
@@ -66,7 +70,30 @@
       color: rgb(2, 29, 41);
       font-family: 'Courier New', Courier, monospace;
       text-shadow: 0px 4px 7px rgba(0, 0, 0, .3);
+      font-size: 45px;
+      padding-left: 25px;
     }
+
+    .Projects {
+      text-align: center;
+      margin-top: 2px;
+      border: 2px solid rgb(2, 29, 41);
+      padding: 10px;
+      background-color: rgb(2, 29, 41); /* Added background color */
+      width: 75%; /* Set the width to 75% of the screen */
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 30px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+    }
+   
+    #Projects_text
+    {
+      margin: 0;
+      font-size: 30px;
+      color: rgb(220, 239, 245);
+    }
+
   </style>
 </head>
 <body>
@@ -77,9 +104,21 @@
     <a href="#Aboutme">About Me</a>
   </div>
 
-  <div class="center-content">
+  <div id="center_body" class="center-content">
     <img src="logo.jpg" alt="TK">
     <h1 id="Name_center">Tim Kellermann</h1>
   </div>
+
+  <div class="Projects">
+    <h1 id="Projects_text">Projects</h1>
+  </div>
+
+  <script>
+    function scrollToProjects() {
+      const projectsSection = document.getElementById('Projects');
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
 </body>
 </html>
