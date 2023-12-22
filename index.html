@@ -85,6 +85,7 @@
       margin-right: auto;
       border-radius: 30px;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+      margin-bottom: 500px;
     }
    
     #Projects_text
@@ -94,13 +95,52 @@
       color: rgb(220, 239, 245);
     }
 
+    p
+    {
+      color: rgb(220, 239, 245);
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    #project_p
+    {
+      text-align: left;
+      font-size: 17px;
+    }
+
+    .Contact
+    {
+      text-align: center;
+      margin-top: 2px;
+      border: 2px solid rgb(2, 29, 41);
+      padding: 10px;
+      background-color: rgb(2, 29, 41); /* Added background color */
+      width: 75%; /* Set the width to 75% of the screen */
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 30px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+    }
+
+    #contact_header
+    {
+      margin: 0;
+      font-size: 30px;
+      color: rgb(220, 239, 245);
+    }
+    
+    #contact_p
+    {
+      text-align: center;
+      font-size: 17px;
+    }
+
   </style>
 </head>
 <body>
   <div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#Projects">Projects</a>
-    <a href="#Contact">Contact</a>
+    <a href="#home" onclick="scrollToSection('center_body')">Home</a>
+    <a href="#Projects" onclick="scrollToSection('Projects_text')">Projects</a>
+    <a href="#Contact" onclick="scrollToSection('contact_header')">Contact</a>
     <a href="#Aboutme">About Me</a>
   </div>
 
@@ -109,14 +149,35 @@
     <h1 id="Name_center">Tim Kellermann</h1>
   </div>
 
-  <div class="Projects">
+  <div class="Projects" id="Projects">
     <h1 id="Projects_text">Projects</h1>
+    <p id="project_p"> 
+    <b>Robot Arm Raspberry Pi device:</b> This project encompasses several
+    of my passions like embedded systems and mechetronics. The end goal is to create a robot
+    arm that can detect and interact with objects.  
+    <br><br>
+    <b>Led Neon Surf Board Sign:</b> Goal is to create a led/neon decor piece. 
+    <br><br>
+    <b> Smart Mirror:</b> Make a smart mirror module using magic mirror os. 
+    Main challenge will be creating the housing for the screen to sit in.
+    <br><br>
+    <b>More to Come!</b>
+  </p>
   </div>
 
+  <div class="Contact">
+    <h1 id="contact_header"> Contact</h1>
+    <p id="contact_p">
+      <a href="https://www.linkedin.com/in/timothy-kellermann"><b>LinkedIn</b></a> |
+      <a href="https://github.com/tmktcq"><b>Github</b></a> |
+      <b>timkellermann0@gmail.com</b>
+    </p>
+  </div>
+  
   <script>
-    function scrollToProjects() {
-      const projectsSection = document.getElementById('Projects');
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   </script>
 
