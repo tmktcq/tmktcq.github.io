@@ -46,102 +46,95 @@
       background-color: #ffffff;
       color: rgb(2, 29, 41);
     }
+    body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(220, 239, 245);
+  background-image: url('background.png');
+  background-repeat: repeat;
+  background-size: cover;
+  font-family: 'Courier New', Courier, monospace;
+}
 
-    #center_body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin-top: 70px; /* Adjust as needed */
-    }
+.topnav {
+  background-color: rgb(2, 29, 41);
+  overflow: hidden;
+  border-radius: 0px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, .5);
+}
 
-    .center-content {
-      text-align: center;
-    }
+#center_body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 0; /* Remove excessive margin-top */
+}
 
-    img {
-      max-width: 100%;
-      height: 64pt;
-      border-radius: 30px;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
-    }
+.Projects,
+.Contact,
+.AboutMe {
+  text-align: center;
+  border: 2px solid rgb(2, 29, 41);
+  padding: 10px;
+  background-color: rgb(2, 29, 41);
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+  margin-bottom: 100px; /* Adjust as needed */
+}
 
-    #Name_center {
-      color: rgb(2, 29, 41);
-      font-family: 'Courier New', Courier, monospace;
-      text-shadow: 0px 4px 7px rgba(0, 0, 0, .3);
-      font-size: 45px;
-      padding-left: 25px;
-    }
+#Projects_text,
+#contact_header,
+#about_me_header {
+  margin: 0;
+  font-size: 30px;
+  color: rgb(220, 239, 245);
+}
 
-    .Projects {
-      text-align: center;
-      margin-top: 2px;
-      border: 2px solid rgb(2, 29, 41);
-      padding: 10px;
-      background-color: rgb(2, 29, 41); /* Added background color */
-      width: 75%; /* Set the width to 75% of the screen */
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 30px;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
-      margin-bottom: 500px;
-    }
-   
-    #Projects_text
-    {
-      margin: 0;
-      font-size: 30px;
-      color: rgb(220, 239, 245);
-    }
+p,
+#project_p,
+#contact_p,
+#about_me_p {
+  color: rgb(220, 239, 245);
+  font-family: 'Courier New', Courier, monospace;
+}
 
-    p
-    {
-      color: rgb(220, 239, 245);
-      font-family: 'Courier New', Courier, monospace;
-    }
+#project_p,
+#about_me_p {
+  text-align: left;
+  font-size: 17px;
+}
 
-    #project_p
-    {
-      text-align: left;
-      font-size: 17px;
-    }
+img {
+  max-width: 100%;
+  height: 64pt;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
 
-    .Contact
-    {
-      text-align: center;
-      margin-top: 2px;
-      border: 2px solid rgb(2, 29, 41);
-      padding: 10px;
-      background-color: rgb(2, 29, 41); /* Added background color */
-      width: 75%; /* Set the width to 75% of the screen */
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 30px;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
-    }
+#Name_center {
+  color: rgb(2, 29, 41);
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 0px 4px 7px rgba(0, 0, 0, .3);
+  font-size: 45px;
+  padding-left: 25px;
+}
 
-    #contact_header
-    {
-      margin: 0;
-      font-size: 30px;
-      color: rgb(220, 239, 245);
-    }
-    
-    #contact_p
-    {
-      text-align: center;
-      font-size: 17px;
-    }
 
   </style>
 </head>
 <body>
   <div class="topnav">
     <a href="#home" onclick="scrollToSection('center_body')">Home</a>
-    <a href="#Projects" onclick="scrollToSection('Projects_text')">Projects</a>
+    <a href="#Projects" onclick="scrollToSection('projects_anchor')">Projects</a>
     <a href="#Contact" onclick="scrollToSection('contact_header')">Contact</a>
-    <a href="#Aboutme">About Me</a>
+    <a href="#AboutMe" onclick="scrollToSection('about_me_header')">About Me</a>
   </div>
 
   <div id="center_body" class="center-content">
@@ -149,7 +142,8 @@
     <h1 id="Name_center">Tim Kellermann</h1>
   </div>
 
-  <div class="Projects" id="Projects">
+  <div class="Projects">
+    <div id="projects_anchor"></div>
     <h1 id="Projects_text">Projects</h1>
     <p id="project_p"> 
     <b>Robot Arm Raspberry Pi device:</b> This project encompasses several
@@ -174,10 +168,21 @@
     </p>
   </div>
   
+  <div class = "AboutMe">
+    <h1 id="about_me_header"> About Me</h1>
+    <p id="about_me_p">
+      Hello! I am Tim Kellermann, I just completed 
+      my degree in Computer Engineering with a minor in
+      Computer Science from Missouri S&T. I am now working full-time 
+      as an embedded software engineer at Garmin. 
+    </p>
+
+  </div>
+
   <script>
     function scrollToSection(sectionId) {
       const section = document.getElementById(sectionId);
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: 'smooth' , block: 'start'});
     }
   </script>
 
