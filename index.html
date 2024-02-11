@@ -46,7 +46,7 @@
       background-color: #ffffff;
       color: rgb(2, 29, 41);
     }
-    body {
+  body {
   margin: 0;
   padding: 0;
   background-color: rgb(220, 239, 245);
@@ -184,6 +184,26 @@ img {
       const section = document.getElementById(sectionId);
       section.scrollIntoView({ behavior: 'smooth' , block: 'start'});
     }
+  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+
+  <script>
+    VANTA.WAVES({
+    el: 'body', // element selector string or DOM object reference
+    color: 0x5a84a4,
+    waveHeight: 30,
+    shininess: 15,
+    waveSpeed: 1,
+    zoom: 0.5,
+    ouseControls: true,
+    touchControls: true,
+    gyroControls: true,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00
+    })
   </script>
 
 </body>
